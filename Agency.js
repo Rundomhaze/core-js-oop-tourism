@@ -14,7 +14,6 @@ class Agency {
   }
 
   sell(countryName) {
-
     this.tours.find((el, i) => {
       if (el.country === countryName) {
         this.tours.splice(i, 1);

@@ -46,7 +46,7 @@ describe('Agency and tourist testing', () => {
         expect(max.buy('Thailand', agency)).toEqual(true);
       });
       it('returns false when tour is unavailable and can not be sold', () => {
-        expect(max.buy('Thailand', agency)).toEqual(true);
+        expect(max.buy('Saratov', agency)).toEqual(false);
       });
     });
 

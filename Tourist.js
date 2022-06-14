@@ -2,16 +2,19 @@ class Tourist {
   constructor(name, age, tours = []) {
     this.name = name;
     this.age = age;
-    this.tours = tours;
+    this.tours = tours
   }
 
   buy(countryName, agency) {
-    agency.tours.forEach(element => {
-      if (element.country === countryName) {
-        this.tours.push(element)
-      }
+    agency.tours.forEach(el => {
+      if(el.country === countryName){
+        this.tours.push(el);        
+      }      
     });
-    return true;
+    const tour = agency.findTour(countryName)
+    if(tour) {
+      return true;
+    } return false;
   }
 }
 
